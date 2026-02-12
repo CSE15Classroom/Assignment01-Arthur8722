@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="airbnb.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<style>
+    html
+{
+    overflow-x: hidden;
+ }
+body{
+    font-family: "Circular", "Montserrat", system-ui, sans-serif;
+    margin: 0px;
+}
+.container
+{
+    background-color: rgb(248, 248, 248);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    padding: 30px 0 20px 0;
+    row-gap: 35px;
+} 
+.logo
+{
+    width: 32px;
+    height: 32px;
+}
+.logo-name
+{
+    translate: -2px -8px;
+    font-size: 23px;
+    color: rgb(230, 12, 48);
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+}
+.middle
+{
+    width: 400px;
+    height: 50px;
+    border-radius: 42px;
+    background-color: rgb(248, 248, 248);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 20px 0 20px;
+}
+.home-img
+{
+    width: 35px;
+    height: 35px;
+    translate: 0 10px
+}
+.home
+{
+    translate: 0 -6px;
+    transition-duration: 0.3s;
+}
+.home-text
+{
+    translate: 30% -105%;
+}
+.home:hover
+{
+    transform: scale(1.1);
+}
+.experience
+{
+    padding: 0 0 0 35px;
+    transition-duration: 0.3s;
+}
+.experience:hover
+{
+    transform: scale(1.1);
+}
+.exp{
+    translate: 0 10px ;
+}
+.img-exp
+{
+    width: 35px;
+    height: 35px;
+    translate: -35px -17px;
+}
+.service
+{
+    justify-self: end;
+    transition-duration: 0.3s;
+}
+.service:hover
+{
+    transform: scale(1.1);
+}
+.service-img
+{
+    width: 35px;
+    height: 35px;
+    translate: 0px 5px;
+}
+.service-text
+{
+    translate: -2px -6px;
+}
+.logo-name, .home, .experience, .service-text {
+    display: inline-block;
+}
+
+.right
+{
+    text-align: end;
+    padding-right: 5px;
+    display: grid;
+    grid-template-columns: 3fr 0.3fr 0.3fr;
+    column-gap: 10px;
+}
+.right-info
+{   padding-right: 30px;
+    translate: 0 8px;
+    font-weight: 600;
+}
+.web-div
+{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(230, 230, 230);
+    padding: 10px 10px 0 0;
+    border-radius: 45px;
+}
+.lines-div
+{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(230, 230, 230);
+    padding: 10px 10px 0 0;
+    border-radius: 45px;
+}
+.web
+{
+    padding: 1px;
+    width: 24px;
+    height: 24px;
+}
+.three-lines
+{
+    padding: 1px;
+    width: 24px;
+    height: 24px;
+}
+.left
+{
+    padding-left: 30px;
+}
+.hidden
+{
+    background-color: rgb(248, 248, 248);
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px 0 30px 0;
+}
+.lower-header
+{
+    width: 820px;
+    height: 55px;
+    background-color: white;
+    margin: 0 0 0 21% ;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-radius: 65px;
+    padding: 10px 0 3px 35px;
+    border: 1px solid rgb(211, 211, 211);
+    box-shadow: 0 5px 50px rgb(209, 209, 209);
+    position: relative;
+}
+.search-icon {
+  width: 20px;
+  height: 20px;
+  color: white;
+  transition: color 0.2s ease;
+  cursor: pointer;
+  background-color: rgb(246, 8, 8);
+}
+
+.search-icon:hover {
+  color: white;
+  background-color: rgb(246, 8, 8);
+}
+.search-button
+{
+    padding-top: 5px;
+    border-radius: 48px;
+    width: 48px;
+    height: 48px;
+    background-color: rgb(246, 8, 8);
+    border: none;
+}
+.search {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.where{
+    font-size: 13px;
+    font-weight: 700;
+}
+.check-out{
+    font-size: 13px;
+    font-weight: 700;
+}
+.check-in{
+    font-size: 13px;
+    font-weight: 700;
+}
+.who{
+    font-size: 13px;
+    font-weight: 700;
+}
+.ba
+{
+    justify-self: end;
+}
+.before
+{
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    background-color: white;
+    border: 1px solid grey;
+}
+.hotels {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: space-between;
+    width: 100%;
+    height: 220px;
+    column-gap: 30px;
+    padding: 0px 40px 0px 40px;
+    box-sizing: border-box;
+}
+.hotels-two {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: space-between;
+    width: 100%;
+    height: 250px;
+    column-gap: 30px;
+    padding: 0 40px 30px 40px;
+    box-sizing: border-box;
+}
+.varanasi, .lucknow
+{
+    padding: 0 0 0 40px;
+}
+.xyz
+{
+    font-size: 19px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0px ;
+}
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 75%;
+    margin: 0px;
+    border-radius: 12px;
+}
+p
+{   font-size: 15px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    padding-left: 5px ;
+    margin: 0px;
+}
+.cost
+{
+    font-size: 11px;
+    color: rgb(168, 168, 168);
+}
+</style>    
+</head>
+    <body>
+        <div class="container">
+            <div class="left">
+                <img class="logo" src="https://img.icons8.com/?size=96&id=103424&format=png">
+                <div class="logo-name">airbnb</div>
+            </div>
+            <div class="middle">
+                <div class="home">
+                    <img class="home-img" src="https://img.icons8.com/?size=160&id=iJzm3AFQCS4W&format=png">
+                    <div class="home-text">Homes</div>
+                </div>
+                <div class="experience">
+                    <div class="exp">Experiences</div>
+                    <img class="img-exp" src="https://img.icons8.com/?size=96&id=tGW1lN11LBlx&format=png">
+                </div>
+                <div class="service">
+                    <img class="service-img" src="https://img.icons8.com/?size=96&id=13556&format=png">
+                    <div class="service-text">Services</div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-info">Become a host</div>
+                <div class="web-div"><img class="web" src="all.pics/icons8-web-24.png"></div>
+                <div class="lines-div"><img class="three-lines" src="all.pics/icons8-news-feed-50.png"></div>
+            </div>
+        </div>   
+         <div class="hidden">
+             <div class="lower-header">
+                <div class="where">Where</div>
+                <div class="check-in">Check in</div>
+                <div class="check-out">Check out</div>
+                <div class="who">Who</div>
+                <div class="destination">Search destinations</div>
+                <div class="dates">Add dates</div>
+                <div class="add-dates-two">Add dates</div>
+                <div class="add-guests">Add guests</div>
+                <div class="search">
+                    <button class="search-button">
+                          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                             <path d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z" 
+                              stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                    </button>
+                </div>
+            </div>    
+        </div>
+        <div class="lucknow">
+            <p class="xyz">Popular Homes in Lucknow ></p>
+        </div>
+        <div class="hotels">
+            <div class="one">
+                <img class="one-img" src="https://media.designcafe.com/wp-content/uploads/2021/04/28110847/middle-class-indian-bedroom-design.jpg">
+                <p>Room in Lucknow</p>
+                <p class="cost">&#8377;3000 for 1 night &middot; &#9734;</p>
+            </div>
+            <div class="two">
+                <img class="two-img" src="https://www.asenseinterior.com/assets/mediafile/DSC_4849-HDR_(1).jpg">
+                <p>Flat in Lucknow</p>
+                <p class="cost">&#8377;5400 for 2 nights &middot; &#9734;</p>
+            </div>
+            <div class="three">
+                <img class="three-img" src="https://homestayvaranasi.in/images/Product/SuperDeluxeRoom/Homestay%202019%20(23).jpg">
+                <p>Guest Suit in Lucknow</p>
+                <p class="cost">&#8377;3900 for 2 nights &middot; &#9734;</p>
+            </div>
+            <div class="four">
+                <img class="four-img" src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmVkcm9vbSUyMGludGVyaW9yfGVufDB8fDB8fHww">
+                <p>Flat in Lucknow</p>
+                <p class="cost">&#8377;1900 for 1 night &middot; &#9734;</p>
+            </div>
+            <div class="five">
+                <img class="five-img" src="https://static.asianpaints.com/content/dam/asianpaintsbeautifulhomes/202303/simple-bedroom-designs-that-are-perfect-for-every-indian-home/simple-bedroom-interior-design.jpg">
+                <p>House in Lucknow</p>
+                <p class="cost">&#8377;2100 for 1 night &middot; &#9734;</p>
+            </div>
+            <div class="six">
+                <img class="six-img" src="https://www.adityacc.com/wp-content/uploads/2017/06/bedrom-interiors.jpg">
+                <p>House in Lucknow</p>
+                <p class="cost">&#8377;3100 for 1 night &middot; &#9734;</p>
+            </div>
+        </div>   
+        <div class="varanasi">
+           <p class="xyz">Available in Varanasi this Weekend ></p>
+        </div>
+        <div class="hotels-two">
+            <div class="one">
+                <img class ="one-img" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/218263508.jpg?k=c210dd8dfa2ee87d4be2abfb686e2b764b4772a1c106a4d8907d387fe43bcd99&o=">
+                <p>House in Varanasi</p>
+                <p class="cost">&#8377;8500 for 2 nighta &middot; &#9734;</p>
+            </div>
+            <div class="two">
+                <img class ="two-img" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/451180794.jpg?k=9cc651943ca088f8c0e19841480e2690a8758ea27d51f48edb7c259bed7f16f2&o=">
+                <p>House in Varanasi</p>
+                <p class="cost">&#8377;4500 for 1 nights &middot; &#9734;</p>
+            </div>
+            <div class="three">
+                <img class="three-img" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/531659739.jpg?k=7d75b40dd2fd3e516eb8a10aa2f8ae5c4f3c23bf474a2ba058ce13386ab966ea&o=">
+                <p>Room in Varanasi</p>
+                <p class="cost">&#8377;2300 for 1 night &middot; &#9734;</p>
+            </div>
+            <div class="four">
+                <img class="four-img" src="https://cdn.yatradham.org/media/catalog/product/u/n/unnamed_17__2.jpg">
+                <p>Flat in Varanasi</p>
+                <p class="cost">&#8377;5500 for 2 nights &middot; &#9734;</p>
+            </div>
+            <div class="five">
+                <img class="five-img" src="https://content.jdmagicbox.com/v2/comp/varanasi/t8/0542px542.x542.240614193537.l8t8/catalogue/cozy-home-stay-wazidpur-varanasi-home-stay-siiac8ka7m.jpg">
+                <p>Flat in Varanasi</p>
+                <p class="cost">&#8377;4100 for 1 night &middot; &#9734;</p>
+            </div>
+            <div class="six">
+                <img class="six-img" src="https://images.oyoroomscdn.com/uploads/hotel_image/304017/tlecnafojtip.jpg">
+                <p>Room in Varanasi</p>
+                <p class="cost">&#8377;8400 for 2 nights &middot; &#9734;</p>
+            </div>
+        </div>    
+    </body>
+</html>
