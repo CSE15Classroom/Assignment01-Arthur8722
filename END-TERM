@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Gallery</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* Gallery container */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* fewer columns = bigger images */
+            gap: 20px;
+        }
+
+        /* Images */
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #aaa;
+            border-radius: 6px;
+            background-color: white;
+        }
+
+        /* Tablet view */
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile view */
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Image Gallery</h1>
+
+    <div class="gallery">
+        <img src="https://via.placeholder.com/400" alt="Image 1">
+        <img src="https://via.placeholder.com/400" alt="Image 2">
+        <img src="https://via.placeholder.com/400" alt="Image 3">
+        <img src="https://via.placeholder.com/400" alt="Image 4">
+        <img src="https://via.placeholder.com/400" alt="Image 5">
+        <img src="https://via.placeholder.com/400" alt="Image 6">
+    </div>
+
+</body>
+</html>
